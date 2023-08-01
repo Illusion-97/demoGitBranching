@@ -1,5 +1,6 @@
 package fr.dawan.demogitbranching.project;
 
+import fr.dawan.demogitbranching.generic.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,13 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Project {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Version
-    private Integer version;
+public class Project extends BaseEntity {
 
     private String name;
 }

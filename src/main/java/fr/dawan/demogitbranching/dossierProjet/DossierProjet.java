@@ -1,5 +1,6 @@
 package fr.dawan.demogitbranching.dossierProjet;
 
+import fr.dawan.demogitbranching.generic.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,13 +14,7 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DossierProjet {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Version
-    private Integer version;
+public class DossierProjet extends BaseEntity {
 
     @Temporal(TemporalType.DATE)
     private LocalDate createdAt;
